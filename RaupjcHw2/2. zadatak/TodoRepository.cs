@@ -20,17 +20,7 @@ namespace _2.zadatak
 
         public TodoRepository(IGenericList<TodoItem> initialDbState = null)
         {
-            if (initialDbState != null)
-            {
-                _inMemoryTodoDatabase = initialDbState;
-            }
-            else
-            {
-                _inMemoryTodoDatabase = new GenericList<TodoItem>();
-            }
-            // Shorter way to write this in C# using ?? operator :
-            // x ?? y => if x is not null , expression returns x. Else it will return y.
-            // _inMemoryTodoDatabase = initialDbState ?? new List < TodoItem >();
+            _inMemoryTodoDatabase = initialDbState ?? new GenericList<TodoItem>();
         }
 
         public TodoItem Get(Guid todoId)

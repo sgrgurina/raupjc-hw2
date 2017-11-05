@@ -38,10 +38,7 @@ namespace _6.i_7.zadatak
             Console.WriteLine(result);
         }
 
-        private static async Task<int> GetTheMagicNumberAsync()
-        {
-            return await IKnowIGuyWhoKnowsAGuyAsync();
-        }
+        private static async Task<int> GetTheMagicNumberAsync() => await IKnowIGuyWhoKnowsAGuyAsync();
 
         private static async Task<int> IKnowIGuyWhoKnowsAGuyAsync()
         {
